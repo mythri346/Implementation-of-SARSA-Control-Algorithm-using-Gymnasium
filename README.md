@@ -206,11 +206,9 @@ Average reward over last 1000 episodes:
 ## Result
 
 
-The SARSA control algorithm was successfully implemented using the Gymnasium FrozenLake environment. The agent learned Q-values through interaction with the environment and developed a policy to reach the goal state while avoiding holes.
+The SARSA algorithm was successfully implemented in the Gymnasium FrozenLake environment. The agent updated its Q-values based on the actions it actually selected and gradually learned a policy for reaching the goal while reducing the chances of falling into holes.
 
 
 ## Inference
 
-When epsilon is fixed, the agent keeps exploring at the same rate throughout training. When epsilon decays, the agent explores more initially and gradually focuses on the best learned actions, usually improving performance.
-
-
+The experiment shows that the exploration strategy affects the learning process. With a constant epsilon, the agent continues exploring at a fixed level throughout training. With epsilon decay, the agent explores more during the early stages and gradually exploits the actions that provide better rewards. Therefore, epsilon decay generally helps the agent learn a more effective policy as training progresses.
